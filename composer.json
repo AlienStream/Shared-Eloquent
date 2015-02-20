@@ -1,0 +1,23 @@
+{
+    "name": "AlienStream/Shared",
+    "description": "Alienstream Shared Content",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "Matthew Bucci",
+            "email": "mtbucci@gmail.com",
+            "homepage": "http://letsrtfm.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Alienstream\\Domain\\": "src/"
+        },
+        "files": []
+    },
+    "require": {
+        "psr/log": "1.0.*@dev",
+        "bugsnag/bugsnag": "2.2.*"
+    },
+    "minimum-stability": "dev"
+}
