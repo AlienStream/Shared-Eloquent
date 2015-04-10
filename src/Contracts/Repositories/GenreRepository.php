@@ -2,10 +2,10 @@
 namespace Alienstream\Domain\Contracts\Repositories;
 
 /**
- * Interface UserRepository
+ * Interface GenreRepository
  * @package Alienstream\Domain\Contracts\Repositories
  */
-interface UserRepository extends AbstractRepository
+interface GenreRepository extends AbstractRepository
 {
 
 }
