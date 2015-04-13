@@ -31,16 +31,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function favoritedTracks()
     {
-        return $this->hasMany('Track');
+        return $this->hasMany('Track', 'user_favorited_tracks');
     }
 
     public function favoritedArtists()
     {
-        return $this->hasMany('Artist');
+        return $this->hasMany('Artist', 'user_favorited_artists');
     }
 
     public function favoritedCommunities()
     {
-        return $this->hasMany('Community');
+        return $this->hasMany('Community', 'user_favorited_communities');
     }
 }

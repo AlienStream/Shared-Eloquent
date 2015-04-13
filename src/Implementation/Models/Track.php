@@ -32,7 +32,7 @@ class Track extends Eloquent
 
     public function communities()
     {
-        return $this->belongsToMany('Community');
+        return $this->belongsToMany('Community', 'community_tracks');
     }
 
 }
