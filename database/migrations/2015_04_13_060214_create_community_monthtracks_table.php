@@ -12,7 +12,7 @@ class CreateCommunityMonthtracksTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('community_tracks', function (Blueprint $table) {
+		Schema::create('community_monthtracks', function (Blueprint $table) {
 			$table->integer('community_id');
 			$table->integer('track_id');
 		});
