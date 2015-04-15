@@ -1,5 +1,5 @@
 <?php
-namespace Alienstream\Domain\Implementation\Models;
+namespace AlienStream\Domain\Implementation\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
@@ -16,12 +16,12 @@ class Genre extends Eloquent
 
     public function artists()
     {
-        return $this->belongsToMany("Artist");
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Artist');
     }
 
     public function communities()
     {
-        return $this->belongsToMany('Community');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Community');
     }
 
 }

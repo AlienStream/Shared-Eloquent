@@ -1,5 +1,5 @@
 <?php
-namespace Alienstream\Domain\Implementation\Models;
+namespace AlienStream\Domain\Implementation\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
@@ -21,6 +21,6 @@ class Post extends Eloquent
     ];
 
     public function source() {
-        return $this->belongsTo('Source');
+        return $this->belongsTo('AlienStream\Domain\Implementation\Models\Source');
     }
 }

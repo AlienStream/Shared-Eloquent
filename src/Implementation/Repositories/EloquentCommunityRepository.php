@@ -1,8 +1,8 @@
 <?php
-namespace Alienstream\Domain\Implementation\Repositories;
+namespace AlienStream\Domain\Implementation\Repositories;
 
-use Alienstream\Domain\Contracts\Repositories\CommunityRepository;
-use Alienstream\Domain\Implementation\Models\Community;
+use AlienStream\Domain\Contracts\Repositories\CommunityRepository;
+use AlienStream\Domain\Implementation\Models\Community;
 
 class EloquentCommunityRepository extends EloquentAbstractRepository implements CommunityRepository
 {

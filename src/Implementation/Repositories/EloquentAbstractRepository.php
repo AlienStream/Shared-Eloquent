@@ -1,11 +1,11 @@
 <?php
-namespace Alienstream\Domain\Implementation\Repositories;
+namespace AlienStream\Domain\Implementation\Repositories;
 
-use Alienstream\Domain\Contracts\Repositories\AbstractRepository;
+use AlienStream\Domain\Contracts\Repositories\AbstractRepository;
 
 /**
  * Class EloquentAbstractRepository
- * @package Alienstream\Domain\Implementation\Repositories
+ * @package AlienStream\Domain\Implementation\Repositories
  */
 class EloquentAbstractRepository implements AbstractRepository
 {

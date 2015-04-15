@@ -1,8 +1,8 @@
 <?php
-namespace Alienstream\Domain\Implementation\Repositories;
+namespace AlienStream\Domain\Implementation\Repositories;
 
-use Alienstream\Domain\Contracts\Repositories\ArtistRepository;
-use Alienstream\Domain\Implementation\Models\Artist;
+use AlienStream\Domain\Contracts\Repositories\ArtistRepository;
+use AlienStream\Domain\Implementation\Models\Artist;
 
 class EloquentArtistRepository extends EloquentAbstractRepository implements ArtistRepository
 {

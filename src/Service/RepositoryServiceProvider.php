@@ -1,5 +1,5 @@
 <?php
-namespace Alienstream\Domain\Service;
+namespace AlienStream\Domain\Service;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -13,24 +13,24 @@ class RepositoryServiceProvider extends ServiceProvider {
     public function register()
     {
         $this->app->bind(
-            'Alienstream\Domain\Contracts\Repositories\ArtistRepository',
-            'Alienstream\Domain\Implementation\Repositories\EloquentArtistRepository'
+            'AlienStream\Domain\Contracts\Repositories\ArtistRepository',
+            'AlienStream\Domain\Implementation\Repositories\EloquentArtistRepository'
         );
         $this->app->bind(
-            'Alienstream\Domain\Contracts\Repositories\CommunityRepository',
-            'Alienstream\Domain\Implementation\Repositories\EloquentCommunityRepository'
+            'AlienStream\Domain\Contracts\Repositories\CommunityRepository',
+            'AlienStream\Domain\Implementation\Repositories\EloquentCommunityRepository'
         );
         $this->app->bind(
-            'Alienstream\Domain\Contracts\Repositories\GenreRepository',
-            'Alienstream\Domain\Implementation\Repositories\EloquentGenreRepository'
+            'AlienStream\Domain\Contracts\Repositories\GenreRepository',
+            'AlienStream\Domain\Implementation\Repositories\EloquentGenreRepository'
         );
         $this->app->bind(
-            'Alienstream\Domain\Contracts\Repositories\TrackRepository',
-            'Alienstream\Domain\Implementation\Repositories\EloquentTrackRepository'
+            'AlienStream\Domain\Contracts\Repositories\TrackRepository',
+            'AlienStream\Domain\Implementation\Repositories\EloquentTrackRepository'
         );
         $this->app->bind(
-            'Alienstream\Domain\Contracts\Repositories\UserRepository',
-            'Alienstream\Domain\Implementation\Repositories\EloquentUserRepository'
+            'AlienStream\Domain\Contracts\Repositories\UserRepository',
+            'AlienStream\Domain\Implementation\Repositories\EloquentUserRepository'
         );
     }
 }

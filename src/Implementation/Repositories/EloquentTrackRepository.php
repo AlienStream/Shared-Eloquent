@@ -1,8 +1,8 @@
 <?php
-namespace Alienstream\Domain\Implementation\Repositories;
+namespace AlienStream\Domain\Implementation\Repositories;
 
-use Alienstream\Domain\Contracts\Repositories\TrackRepository;
-use Alienstream\Domain\Implementation\Models\Track;
+use AlienStream\Domain\Contracts\Repositories\TrackRepository;
+use AlienStream\Domain\Implementation\Models\Track;
 
 class EloquentTrackRepository extends EloquentAbstractRepository implements TrackRepository
 {

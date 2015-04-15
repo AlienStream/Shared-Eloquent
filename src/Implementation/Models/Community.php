@@ -1,5 +1,5 @@
 <?php
-namespace Alienstream\Domain\Implementation\Models;
+namespace AlienStream\Domain\Implementation\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
@@ -31,31 +31,31 @@ class Community extends Eloquent
 
     public function genres()
     {
-        return $this->belongsToMany('Genre');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Genre');
     }
 
     public function sources()
     {
-        return $this->belongsToMany('Source');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Source');
     }
 
     public function allTracks()
     {
-        return $this->hasMany('Track', 'community_alltracks');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'community_alltracks');
     }
 
     public function monthTracks()
     {
-        return $this->hasMany('Track', 'community_monthtracks');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'community_monthtracks');
     }
 
     public function weekTracks()
     {
-        return $this->hasMany('Track', 'community_weektracks');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'community_weektracks');
     }
 
     public function tracks()
     {
-        return $this->hasMany('Track', 'community_tracks');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'community_tracks');
     }
 }

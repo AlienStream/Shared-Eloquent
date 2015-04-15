@@ -1,8 +1,8 @@
 <?php
-namespace Alienstream\Domain\Implementation\Repositories;
+namespace AlienStream\Domain\Implementation\Repositories;
 
-use Alienstream\Domain\Contracts\Repositories\GenreRepository;
-use Alienstream\Domain\Implementation\Models\Genre;
+use AlienStream\Domain\Contracts\Repositories\GenreRepository;
+use AlienStream\Domain\Implementation\Models\Genre;
 
 class EloquentGenreRepository extends EloquentAbstractRepository implements GenreRepository
 {

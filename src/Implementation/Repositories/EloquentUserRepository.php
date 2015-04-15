@@ -1,8 +1,8 @@
 <?php
-namespace Alienstream\Domain\Implementation\Repositories;
+namespace AlienStream\Domain\Implementation\Repositories;
 
-use Alienstream\Domain\Contracts\Repositories\UserRepository;
-use Alienstream\Domain\Implementation\Models\User;
+use AlienStream\Domain\Contracts\Repositories\UserRepository;
+use AlienStream\Domain\Implementation\Models\User;
 
 class EloquentUserRepository extends EloquentAbstractRepository implements UserRepository
 {

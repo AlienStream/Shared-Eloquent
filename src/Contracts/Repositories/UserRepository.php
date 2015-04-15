@@ -1,9 +1,9 @@
 <?php
-namespace Alienstream\Domain\Contracts\Repositories;
+namespace AlienStream\Domain\Contracts\Repositories;
 
 /**
  * Interface UserRepository
- * @package Alienstream\Domain\Contracts\Repositories
+ * @package AlienStream\Domain\Contracts\Repositories
  */
 interface UserRepository extends AbstractRepository
 {

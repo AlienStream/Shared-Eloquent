@@ -1,5 +1,5 @@
 <?php
-namespace Alienstream\Domain\Implementation\Models;
+namespace AlienStream\Domain\Implementation\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
@@ -22,17 +22,17 @@ class Track extends Eloquent
 
     public function artist()
     {
-        return $this->belongsTo('Artist');
+        return $this->belongsTo('AlienStream\Domain\Implementation\Models\Artist');
     }
 
     public function channel()
     {
-        return $this->belongsTo('Channel');
+        return $this->belongsTo('AlienStream\Domain\Implementation\Models\Channel');
     }
 
     public function communities()
     {
-        return $this->belongsToMany('Community', 'community_tracks');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Community', 'community_tracks');
     }
 
 }

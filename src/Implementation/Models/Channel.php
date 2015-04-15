@@ -1,5 +1,5 @@
 <?php
-namespace Alienstream\Domain\Implementation\Models;
+namespace AlienStream\Domain\Implementation\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
@@ -15,11 +15,11 @@ class Channel extends Eloquent
 
     public function artists()
     {
-        return $this->belongsTo('Artist');
+        return $this->belongsTo('AlienStream\Domain\Implementation\Models\Artist');
     }
 
     public function tracks()
     {
-        return $this->hasMany('Track');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track');
     }
 }

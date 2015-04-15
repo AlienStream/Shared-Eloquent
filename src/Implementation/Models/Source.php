@@ -1,5 +1,5 @@
 <?php
-namespace Alienstream\Domain\Implementation\Models;
+namespace AlienStream\Domain\Implementation\Models;
 
 use Illuminate\Database\Eloquent\Model as Eloquent;
 
@@ -19,11 +19,11 @@ class Source extends Eloquent
 
     public function communities()
     {
-        return $this->belongsToMany('Community');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Community');
     }
 
     public function posts()
     {
-        return $this->hasMany('Post');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Post');
     }
 }

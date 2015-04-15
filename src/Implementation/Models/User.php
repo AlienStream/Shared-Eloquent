@@ -1,5 +1,5 @@
 <?php
-namespace Alienstream\Domain\Implementation\Models;
+namespace AlienStream\Domain\Implementation\Models;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -31,16 +31,16 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function favoritedTracks()
     {
-        return $this->hasMany('Track', 'user_favorited_tracks');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'user_favorited_tracks');
     }
 
     public function favoritedArtists()
     {
-        return $this->hasMany('Artist', 'user_favorited_artists');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Artist', 'user_favorited_artists');
     }
 
     public function favoritedCommunities()
     {
-        return $this->hasMany('Community', 'user_favorited_communities');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Community', 'user_favorited_communities');
     }
 }

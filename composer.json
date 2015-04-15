@@ -1,6 +1,6 @@
 {
     "name": "AlienStream/Shared",
-    "description": "Alienstream Shared Content",
+    "description": "AlienStream Shared Content",
     "keywords": [],
     "authors": [
         {
@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Alienstream\\Domain\\": "src/"
+            "AlienStream\\Domain\\": "src/"
         },
         "files": []
     },
