@@ -39,23 +39,8 @@ class Community extends Eloquent
         return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Source');
     }
 
-    public function allTracks()
-    {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'community_alltracks');
-    }
-
-    public function monthTracks()
-    {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'community_monthtracks');
-    }
-
-    public function weekTracks()
-    {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'community_weektracks');
-    }
-
     public function tracks()
     {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'community_tracks');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track');
     }
 }

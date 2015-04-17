@@ -20,6 +20,7 @@ class CreateTracksTable extends Migration {
 			$table->string('type');
 			$table->integer('favorite_count');
 			$table->integer('play_count');
+			$table->string('embed_type');
 			$table->string('embed_id');
 			$table->integer('artist_id');
 			$table->integer('channel_id');

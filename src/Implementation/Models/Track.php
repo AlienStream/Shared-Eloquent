@@ -15,6 +15,7 @@ class Track extends Eloquent
         'type',
         'favorite_count',
         'play_count',
+        'embed_type',
         'embed_id',
         'artist_id',
         'channel_id',
@@ -32,7 +33,7 @@ class Track extends Eloquent
 
     public function communities()
     {
-        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Community', 'community_tracks');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Community');
     }
 
 }
