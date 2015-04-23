@@ -13,8 +13,10 @@ class CreateArtistGenreTable extends Migration {
 	public function up()
 	{
 		Schema::create('artist_genre', function (Blueprint $table) {
-			$table->integer('artist_id');
-			$table->integer('genre_id');
+			$table->unsignedInteger('artist_id');
+			$table->foreign('artist_id')->references('id')->on('artists');
+			$table->unsignedInteger('genre_id');
+			$table->foreign('genre_id')->references('id')->on('genres');
 		});
 	}
 

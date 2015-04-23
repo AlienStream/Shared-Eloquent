@@ -13,8 +13,10 @@ class CreateCommunityTracksTable extends Migration {
 	public function up()
 	{
 		Schema::create('community_track', function (Blueprint $table) {
-			$table->integer('community_id');
-			$table->integer('track_id');
+			$table->unsignedInteger('community_id');
+			$table->foreign('community_id')->references('id')->on('communities');
+			$table->unsignedInteger('track_id');
+			$table->foreign('track_id')->references('id')->on('tracks');
 		});
 	}
 

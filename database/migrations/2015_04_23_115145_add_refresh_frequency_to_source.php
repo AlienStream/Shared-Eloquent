@@ -14,7 +14,7 @@ class AddRefreshFrequencyToSource extends Migration {
 	{
 		Schema::table('sources', function(Blueprint $table)
 		{
-			$table->integer('refresh_frequency');
+			$table->unsignedInteger('refresh_frequency');
 		});
 	}
 

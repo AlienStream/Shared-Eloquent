@@ -15,10 +15,9 @@ class CreateArtistsTable extends Migration {
 		Schema::create('artists', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
-			$table->string('thumbnail')->nullable();
-			$table->integer('user_id')->nullable();
-			$table->integer('favorite_count');
-			$table->integer('play_count');
+			$table->string('thumbnail');
+			$table->unsignedInteger('favorite_count');
+			$table->unsignedInteger('play_count');
 			$table->timestamps();
 		});
 	}

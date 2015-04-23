@@ -15,13 +15,16 @@ class CreatePostsTable extends Migration {
 		Schema::create('posts', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('title');
-			$table->integer('number_of_comments');
+			$table->unsignedInteger('number_of_comments');
 			$table->string('permalink');
 			$table->string('thumbnail');
 			$table->integer('likes');
 			$table->integer('dislikes');
 			$table->string('submitter');
-			$table->integer('source_id');
+			$table->unsignedInteger('source_id');
+			$table->foreign('source_id')->references('id')->on('sources');
+			$table->boolean('is_new');
+			$table->dateTime('posted_at');
 			$table->timestamps();
 		});
 	}

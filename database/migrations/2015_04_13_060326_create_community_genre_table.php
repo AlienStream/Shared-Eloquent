@@ -13,8 +13,10 @@ class CreateCommunityGenreTable extends Migration {
 	public function up()
 	{
 		Schema::create('community_genre', function (Blueprint $table) {
-			$table->integer('community_id');
-			$table->integer('genre_id');
+			$table->unsignedInteger('community_id');
+			$table->foreign('community_id')->references('id')->on('communities');
+			$table->unsignedInteger('genre_id');
+			$table->foreign('genre_id')->references('id')->on('genres');
 		});
 	}
 

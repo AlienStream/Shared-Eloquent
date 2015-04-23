@@ -13,8 +13,10 @@ class CreateUserFavoritedArtistsTable extends Migration {
 	public function up()
 	{
 		Schema::create('user_favorited_artists', function (Blueprint $table) {
-			$table->integer('user_id');
-			$table->integer('artist_id');
+			$table->unsignedInteger('user_id');
+			$table->foreign('user_id')->references('id')->on('users');
+			$table->unsignedInteger('artist_id');
+			$table->foreign('artist_id')->references('id')->on('artists');
 		});
 	}
 

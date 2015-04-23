@@ -17,7 +17,7 @@ class CreateSourcesTable extends Migration {
 			$table->string('title');
 			$table->string('description');
 			$table->string('type');
-			$table->integer('importance');
+			$table->unsignedInteger('importance');
 			$table->string('url');
 			$table->string('thumbnail');
 			$table->timestamps();

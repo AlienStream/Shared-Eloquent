@@ -16,7 +16,9 @@ class Post extends Eloquent
         'likes',
         'dislikes',
         'submitter',
-        'source_id'
+        'source_id',
+        'is_new',
+        'posted_at',
     ];
 
     public function source() {

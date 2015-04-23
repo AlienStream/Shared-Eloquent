@@ -15,7 +15,8 @@ class CreateChannelsTable extends Migration {
 		Schema::create('channels', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('url');
-			$table->integer('artist_id');
+			$table->unsignedInteger('artist_id');
+			$table->foreign('artist_id')->references('id')->on('artists');
 			$table->timestamps();
 		});
 	}

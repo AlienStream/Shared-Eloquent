@@ -18,12 +18,10 @@ class CreateTracksTable extends Migration {
 			$table->integer('rank');
 			$table->string('thumbnail');
 			$table->string('type');
-			$table->integer('favorite_count');
-			$table->integer('play_count');
-			$table->string('embed_type');
-			$table->string('embed_id');
-			$table->integer('artist_id');
-			$table->integer('channel_id');
+			$table->unsignedInteger('favorite_count');
+			$table->unsignedInteger('play_count');
+			$table->unsignedInteger('artist_id');
+			$table->foreign('artist_id')->references('id')->on('artists');
 			$table->timestamps();
 		});
 	}

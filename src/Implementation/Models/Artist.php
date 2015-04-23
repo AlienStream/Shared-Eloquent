@@ -11,7 +11,6 @@ class Artist extends Eloquent
     protected $fillable = [
         'name',
         'thumbnail',
-        'user_id',
         'favorite_count',
         'play_count',
     ];
@@ -29,10 +28,5 @@ class Artist extends Eloquent
     public function tracks()
     {
         return $this->hasMany('AlienStream\Domain\Implementation\Models\Track');
-    }
-
-    public function user()
-    {
-        return $this->belongsTo('AlienStream\Domain\Implementation\Models\User');
     }
 }

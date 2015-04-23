@@ -13,8 +13,10 @@ class CreateArtistTrackPivotTable extends Migration {
 	public function up()
 	{
 		Schema::create('artist_track', function (Blueprint $table) {
-			$table->integer('artist_id');
-			$table->integer('track_id');
+			$table->unsignedInteger('artist_id');
+			$table->foreign('artist_id')->references('id')->on('artists');
+			$table->unsignedInteger('track_id');
+			$table->foreign('track_id')->references('id')->on('tracks');
 		});
 	}
 

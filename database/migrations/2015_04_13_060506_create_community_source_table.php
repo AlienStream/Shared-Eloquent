@@ -13,8 +13,10 @@ class CreateCommunitySourceTable extends Migration {
 	public function up()
 	{
 		Schema::create('community_source', function (Blueprint $table) {
-			$table->integer('community_id');
-			$table->integer('source_id');
+			$table->unsignedInteger('community_id');
+			$table->foreign('community_id')->references('id')->on('communities');
+			$table->unsignedInteger('source_id');
+			$table->foreign('source_id')->references('id')->on('sources');
 		});
 	}
 

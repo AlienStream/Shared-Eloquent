@@ -17,8 +17,8 @@ class CreateCommunitiesTable extends Migration {
 			$table->string('name');
 			$table->string('thumbnail');
 			$table->text('description');
-			$table->integer('favorite_count');
-			$table->integer('play_count');
+			$table->unsignedInteger('favorite_count');
+			$table->unsignedInteger('play_count');
 			$table->timestamps();
 		});
 	}

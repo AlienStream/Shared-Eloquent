@@ -13,8 +13,10 @@ class CreateUserFavoritedCommunitiesTable extends Migration {
 	public function up()
 	{
 		Schema::create('user_favorited_communities', function (Blueprint $table) {
-			$table->integer('user_id');
-			$table->integer('community_id');
+			$table->unsignedInteger('user_id');
+			$table->foreign('user_id')->references('id')->on('users');
+			$table->unsignedInteger('community_id');
+			$table->foreign('community_id')->references('id')->on('communities');
 		});
 	}
 
