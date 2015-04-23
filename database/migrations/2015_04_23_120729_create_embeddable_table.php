@@ -15,8 +15,8 @@ class CreateEmbeddableTable extends Migration {
 		Schema::create('embeddables', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->int('track_id');
-			$table->int('channel_id');
+			$table->integer('track_id');
+			$table->integer('channel_id');
 			$table->string('url')->unique();
 			$table->string('type');
 			$table->timestamps();
