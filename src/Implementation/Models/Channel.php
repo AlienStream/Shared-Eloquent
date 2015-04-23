@@ -18,8 +18,8 @@ class Channel extends Eloquent
         return $this->belongsTo('AlienStream\Domain\Implementation\Models\Artist');
     }
 
-    public function tracks()
+    public function embeddables()
     {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track');
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Embeddable');
     }
 }

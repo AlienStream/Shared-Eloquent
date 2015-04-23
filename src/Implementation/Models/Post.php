@@ -12,7 +12,6 @@ class Post extends Eloquent
         'title',
         'number_of_comments',
         'permalink',
-        'content_url',
         'thumbnail',
         'likes',
         'dislikes',

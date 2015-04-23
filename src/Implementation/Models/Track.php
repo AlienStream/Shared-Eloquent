@@ -15,10 +15,7 @@ class Track extends Eloquent
         'type',
         'favorite_count',
         'play_count',
-        'embed_type',
-        'embed_id',
         'artist_id',
-        'channel_id',
     ];
 
     public function artist()
@@ -26,14 +23,14 @@ class Track extends Eloquent
         return $this->belongsTo('AlienStream\Domain\Implementation\Models\Artist');
     }
 
-    public function channel()
-    {
-        return $this->belongsTo('AlienStream\Domain\Implementation\Models\Channel');
-    }
-
     public function communities()
     {
         return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Community');
+    }
+
+    public function embeddable()
+    {
+        return $this->hasOne('AlienStream\Domain\Implementation\Models\Embeddable');
     }
 
 }

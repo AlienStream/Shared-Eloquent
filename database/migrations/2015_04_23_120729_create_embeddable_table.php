@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateArtistsTable extends Migration {
+class CreateEmbeddableTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,13 +12,13 @@ class CreateArtistsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('artists', function (Blueprint $table) {
+		Schema::create('embeddables', function(Blueprint $table)
+		{
 			$table->increments('id');
-			$table->string('name');
-			$table->string('thumbnail')->nullable();
-			$table->integer('user_id')->nullable();
-			$table->integer('favorite_count');
-			$table->integer('play_count');
+			$table->int('track_id');
+			$table->int('channel_id');
+			$table->string('url')->unique();
+			$table->string('type');
 			$table->timestamps();
 		});
 	}
@@ -30,7 +30,7 @@ class CreateArtistsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('artists');
+		Schema::drop('embeddables');
 	}
 
 }

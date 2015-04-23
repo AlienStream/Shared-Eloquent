@@ -17,7 +17,6 @@ class CreatePostsTable extends Migration {
 			$table->string('title');
 			$table->integer('number_of_comments');
 			$table->string('permalink');
-			$table->string('content_url');
 			$table->string('thumbnail');
 			$table->integer('likes');
 			$table->integer('dislikes');

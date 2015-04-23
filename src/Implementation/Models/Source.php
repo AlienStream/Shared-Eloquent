@@ -14,7 +14,8 @@ class Source extends Eloquent
         'type',
         'importance',
         'url',
-        'thumbnail'
+        'thumbnail',
+        'refresh_frequency'
     ];
 
     public function communities()
