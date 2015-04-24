@@ -16,7 +16,7 @@ class CreateUserFavoritedTracksTable extends Migration {
 			$table->unsignedInteger('user_id');
 			$table->foreign('user_id')->references('id')->on('users');
 			$table->unsignedInteger('track_id');
-			$table->foreign('artist_id')->references('id')->on('artists');
+			$table->foreign('track_id')->references('id')->on('tracks');
 
 		});
 	}
