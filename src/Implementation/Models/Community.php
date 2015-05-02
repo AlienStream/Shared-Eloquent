@@ -43,4 +43,9 @@ class Community extends Eloquent
     {
         return $this->hasMany('AlienStream\Domain\Implementation\Models\Track');
     }
+
+    public function moderators()
+    {
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\User', 'user_moderated_communities');
+    }
 }

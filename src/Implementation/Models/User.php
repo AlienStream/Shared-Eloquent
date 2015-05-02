@@ -43,4 +43,9 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     {
         return $this->hasMany('AlienStream\Domain\Implementation\Models\Community', 'user_favorited_communities');
     }
+
+    public function moderatedCommunities()
+    {
+        return $this->hasMany('AlienStream\Domain\Implementation\Models\Community', 'user_moderated_communities');
+    }
 }

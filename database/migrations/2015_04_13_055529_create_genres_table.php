@@ -15,8 +15,6 @@ class CreateGenresTable extends Migration {
 		Schema::create('genres', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('url');
-			$table->UnsignedInteger('artist_id');
-			$table->foreign('artist_id')->references('id')->on('artists');
 			$table->timestamps();
 		});
 	}
