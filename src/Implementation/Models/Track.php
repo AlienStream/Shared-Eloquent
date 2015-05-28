@@ -12,15 +12,14 @@ class Track extends Eloquent
         'title',
         'rank',
         'thumbnail',
-        'type',
         'favorite_count',
         'play_count',
-        'artist_id',
+        'channel_id',
     ];
 
-    public function artist()
+    public function channel()
     {
-        return $this->belongsTo('AlienStream\Domain\Implementation\Models\Artist');
+        return $this->belongsTo('AlienStream\Domain\Implementation\Models\Channel');
     }
 
     public function communities()

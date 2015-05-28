@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCommunityTracksTable extends Migration {
+class CreateSourceTracksTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,9 @@ class CreateCommunityTracksTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('community_track', function (Blueprint $table) {
-			$table->unsignedInteger('community_id');
-			$table->foreign('community_id')->references('id')->on('communities');
+		Schema::create('source_track', function (Blueprint $table) {
+			$table->unsignedInteger('source_id');
+			$table->foreign('source_id')->references('id')->on('sources');
 			$table->unsignedInteger('track_id');
 			$table->foreign('track_id')->references('id')->on('tracks');
 		});
@@ -27,7 +27,7 @@ class CreateCommunityTracksTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('community_track');
+		Schema::drop('source_track');
 	}
 
 }

@@ -15,13 +15,12 @@ class CreateTracksTable extends Migration {
 		Schema::create('tracks', function (Blueprint $table) {
 			$table->increments('id');
 			$table->string('title');
-			$table->integer('rank');
+			$table->float('rank');
 			$table->string('thumbnail');
-			$table->string('type');
 			$table->unsignedInteger('favorite_count');
 			$table->unsignedInteger('play_count');
-			$table->unsignedInteger('artist_id');
-			$table->foreign('artist_id')->references('id')->on('artists');
+			$table->unsignedInteger('channel_id');
+			$table->foreign('channel_id')->references('id')->on('channel');
 			$table->timestamps();
 		});
 	}

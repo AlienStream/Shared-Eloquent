@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration {
 			$table->integer('likes');
 			$table->integer('dislikes');
 			$table->string('submitter');
+			$table->string('embed_url');
 			$table->unsignedInteger('source_id');
 			$table->foreign('source_id')->references('id')->on('sources');
 			$table->boolean('is_new');
