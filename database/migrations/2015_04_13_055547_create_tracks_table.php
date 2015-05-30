@@ -20,7 +20,7 @@ class CreateTracksTable extends Migration {
 			$table->unsignedInteger('favorite_count');
 			$table->unsignedInteger('play_count');
 			$table->unsignedInteger('channel_id');
-			$table->foreign('channel_id')->references('id')->on('channel');
+			$table->foreign('channel_id')->references('id')->on('channels');
 			$table->timestamps();
 		});
 	}
