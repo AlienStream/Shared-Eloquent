@@ -15,7 +15,6 @@ class Embeddable extends Eloquent
 	];
 	protected $fillable = [
 		'track_id',
-		'channel_id',
 		'url',
 		'type',
 	];

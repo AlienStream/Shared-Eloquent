@@ -17,8 +17,6 @@ class CreateEmbeddableTable extends Migration {
 			$table->increments('id');
 			$table->unsignedInteger('track_id');
 			$table->foreign('track_id')->references('id')->on('tracks');
-			$table->unsignedInteger('channel_id');
-			$table->foreign('channel_id')->references('id')->on('channels');
 			$table->string('url')->unique();
 			$table->string('type');
 			$table->timestamps();
