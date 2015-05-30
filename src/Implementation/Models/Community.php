@@ -39,10 +39,6 @@ class Community extends Eloquent
         return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Source');
     }
 
-    public function tracks()
-    {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track');
-    }
 
     public function moderators()
     {

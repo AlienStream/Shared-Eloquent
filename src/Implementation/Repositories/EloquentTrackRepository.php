@@ -11,6 +11,12 @@ class EloquentTrackRepository extends EloquentAbstractRepository implements Trac
         $this->model = $model;
     }
 
+    public function all() {
+        return $this->model
+            ->with('embeddable')
+            ->get();
+    }
+
     public function trending()
     {
         // TODO: Implement trending() method.

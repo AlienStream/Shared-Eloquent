@@ -11,18 +11,34 @@ class EloquentCommunityRepository extends EloquentAbstractRepository implements 
         $this->model = $model;
     }
 
+    public function byName($name)
+    {
+        return $this->model
+            ->where('name','=', $name)
+            ->firstOrFail();
+    }
+
     public function trending()
     {
-        // TODO: Implement trending() method.
+        return $this->model
+            ->orderBy('play_count', 'DESC')
+            ->take(9)
+            ->get();
     }
 
     public function popular()
     {
-        // TODO: Implement popular() method.
+        return $this->model
+            ->orderBy('favorite_count', 'DESC')
+            ->take(9)
+            ->get();
     }
 
     public function newest()
     {
-        // TODO: Implement newest() method.
+        return $this->model
+            ->orderBy('created_at', 'DESC')
+            ->take(9)
+            ->get();
     }
 }

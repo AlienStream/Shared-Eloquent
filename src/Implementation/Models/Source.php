@@ -27,4 +27,9 @@ class Source extends Eloquent
     {
         return $this->hasMany('AlienStream\Domain\Implementation\Models\Post');
     }
+
+    public function tracks()
+    {
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Track');
+    }
 }
