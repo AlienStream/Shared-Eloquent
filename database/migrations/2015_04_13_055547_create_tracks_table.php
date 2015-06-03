@@ -21,6 +21,7 @@ class CreateTracksTable extends Migration {
 			$table->unsignedInteger('play_count');
 			$table->unsignedInteger('channel_id');
 			$table->foreign('channel_id')->references('id')->on('channels');
+			$table->unsignedInteger('content_flags');
 			$table->timestamps();
 		});
 	}
