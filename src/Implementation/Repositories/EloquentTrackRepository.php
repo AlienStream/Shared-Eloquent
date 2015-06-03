@@ -14,6 +14,7 @@ class EloquentTrackRepository extends EloquentAbstractRepository implements Trac
     public function all() {
         return $this->model
             ->with('embeddable')
+            ->orderBy('rank', 'DESC')
             ->get();
     }
 

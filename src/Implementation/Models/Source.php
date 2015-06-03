@@ -30,6 +30,9 @@ class Source extends Eloquent
 
     public function tracks()
     {
-        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Track');
+        return $this
+            ->belongsToMany('AlienStream\Domain\Implementation\Models\Track')
+            ->where('content_flags', '<', '5')
+            ->orderBy('rank', 'DESC');
     }
 }

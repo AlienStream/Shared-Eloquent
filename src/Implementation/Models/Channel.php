@@ -13,7 +13,7 @@ class Channel extends Eloquent
         'artist_id'
     ];
 
-    public function artists()
+    public function artist()
     {
         return $this->belongsTo('AlienStream\Domain\Implementation\Models\Artist');
     }
