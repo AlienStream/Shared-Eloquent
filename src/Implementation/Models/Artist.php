@@ -20,13 +20,16 @@ class Artist extends Eloquent
         return $this->hasMany('AlienStream\Domain\Implementation\Models\Channel');
     }
 
-    public function generes()
+    public function genres()
     {
         return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Genre');
     }
 
     public function tracks()
     {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track');
+        return $this->hasManyThrough(
+            'AlienStream\Domain\Implementation\Models\Track',
+            'AlienStream\Domain\Implementation\Models\Channel'
+        );
     }
 }

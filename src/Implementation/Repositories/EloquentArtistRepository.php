@@ -12,13 +12,35 @@ class EloquentArtistRepository extends EloquentAbstractRepository implements Art
         $this->model = $model;
     }
 
+    public function find($id) {
+        return $this->model
+            ->where('id','=', $id)
+            ->with('tracks')
+            ->with('channels')
+            ->firstOrFail();
+    }
+
     public function trending()
     {
-        // TODO: Implement trending() method.
+        return $this->model
+            ->orderBy('play_count', 'DESC')
+            ->take(9)
+            ->get();
     }
 
     public function popular()
     {
-        // TODO: Implement popular() method.
+        return $this->model
+            ->orderBy('favorite_count', 'DESC')
+            ->take(9)
+            ->get();
+    }
+
+    public function newest()
+    {
+        return $this->model
+            ->orderBy('created_at', 'DESC')
+            ->take(9)
+            ->get();
     }
 }

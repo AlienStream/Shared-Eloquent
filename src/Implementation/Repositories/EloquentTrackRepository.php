@@ -20,11 +20,25 @@ class EloquentTrackRepository extends EloquentAbstractRepository implements Trac
 
     public function trending()
     {
-        // TODO: Implement trending() method.
+        return $this->model
+            ->orderBy('play_count', 'DESC')
+            ->take(9)
+            ->get();
     }
 
     public function popular()
     {
-        // TODO: Implement popular() method.
+        return $this->model
+            ->orderBy('favorite_count', 'DESC')
+            ->take(9)
+            ->get();
+    }
+
+    public function newest()
+    {
+        return $this->model
+            ->orderBy('created_at', 'DESC')
+            ->take(9)
+            ->get();
     }
 }

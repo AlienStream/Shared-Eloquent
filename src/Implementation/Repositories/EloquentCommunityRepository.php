@@ -15,6 +15,8 @@ class EloquentCommunityRepository extends EloquentAbstractRepository implements 
     {
         return $this->model
             ->where('name','=', $name)
+            ->with('genres')
+            ->with('sources')
             ->firstOrFail();
     }
 

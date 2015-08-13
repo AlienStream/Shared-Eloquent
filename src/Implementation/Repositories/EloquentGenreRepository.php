@@ -10,4 +10,12 @@ class EloquentGenreRepository extends EloquentAbstractRepository implements Genr
     {
         $this->model = $model;
     }
+
+    public function find($id) {
+        return $this->model
+            ->where('id', '=', $id)
+            ->with('communities')
+            ->with('artists')
+            ->first();
+    }
 }

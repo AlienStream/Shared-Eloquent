@@ -31,21 +31,21 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function favoritedTracks()
     {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Track', 'user_favorited_tracks');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Track', 'user_favorited_tracks');
     }
 
     public function favoritedArtists()
     {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Artist', 'user_favorited_artists');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Artist', 'user_favorited_artists');
     }
 
     public function favoritedCommunities()
     {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Community', 'user_favorited_communities');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Community', 'user_favorited_communities');
     }
 
     public function moderatedCommunities()
     {
-        return $this->hasMany('AlienStream\Domain\Implementation\Models\Community', 'user_moderated_communities');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Community', 'user_moderated_communities');
     }
 }
