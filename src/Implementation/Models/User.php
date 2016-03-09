@@ -31,7 +31,12 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 
     public function favoritedTracks()
     {
-        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Track', 'user_favorited_tracks');
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Track', 'user_favorited_tracks')->with('embeddable');
+    }
+
+    public function flaggedTracks()
+    {
+        return $this->belongsToMany('AlienStream\Domain\Implementation\Models\Track', 'user_flagged_tracks');
     }
 
     public function favoritedArtists()

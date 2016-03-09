@@ -11,6 +11,13 @@ class EloquentTrackRepository extends EloquentAbstractRepository implements Trac
         $this->model = $model;
     }
 
+    public function find($id) {
+        return $this->model
+            ->where('id','=', $id)
+            ->with('embeddable')
+            ->firstOrFail();
+    }
+
     public function all() {
         return $this->model
             ->with('embeddable')

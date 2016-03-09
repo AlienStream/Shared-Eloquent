@@ -18,7 +18,7 @@ class Community extends Eloquent
     protected $fillable = [
         'name',
         'description',
-        'thumbnail'
+        'thumbnail',
     ];
 
     public function getPopularity()

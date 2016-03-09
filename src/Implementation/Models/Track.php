@@ -16,7 +16,10 @@ class Track extends Eloquent
         'play_count',
         'channel_id',
         'content_flags',
+        'favorited', // not database backed
+        'flagged' // not database backed
     ];
+
 
     public function channel()
     {

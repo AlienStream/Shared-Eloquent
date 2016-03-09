@@ -32,5 +32,9 @@ class RepositoryServiceProvider extends ServiceProvider {
             'AlienStream\Domain\Contracts\Repositories\UserRepository',
             'AlienStream\Domain\Implementation\Repositories\EloquentUserRepository'
         );
+        $this->app->bind(
+            'AlienStream\Domain\Contracts\Repositories\PostRepository',
+            'AlienStream\Domain\Implementation\Repositories\EloquentPostRepository'
+        );
     }
 }
